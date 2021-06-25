@@ -1,4 +1,4 @@
-* [概况](/pages/overview)
+* [概述](/)
 * [字典规范](/pages/dictionary)
 * [sdk函数](/pages/sdk)
 * [API接口](/pages/api)

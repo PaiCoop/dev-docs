@@ -6,4 +6,4 @@
 
 
 [GitHub](https://github.com/PaiCoop/PaiCoop)
-[Get Started](#overview)
+[Get Started](#PaiCoop)
