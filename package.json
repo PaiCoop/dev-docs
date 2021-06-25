@@ -1,0 +1,17 @@
+{
+  "name": "PaiCoop-Docs",
+  "version": "0.0.1",
+  "description": "Development Document for PaiCoop.",
+  "main": "index.js",
+  "repository": "https://github.com/PaiCoop/dev-docs",
+  "scripts": {
+    "start": "docsify",
+    "serve": "docsify serve ."
+  },
+  "author": "IoTcat <i@iotcat.me>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "docsify-cli": "^4.4.1"
+  }
+}
