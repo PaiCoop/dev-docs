@@ -72,6 +72,17 @@ sdk.pull(String netid)
 FormObject。如找不到则返回null。
 
 
+## 重置(仅测试目的)
+
+删除所有数据。
+
+### Syntax
+
+```js
+sdk.reset()
+```
+
+
 ## 获取列表
 
 ### Syntax
