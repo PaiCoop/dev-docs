@@ -38,11 +38,16 @@ sdk.push(Object FormObject)
 
 ### Returns
 
+Promise对象。
+
+#### statusObj
+
 ```json
 {
 	"status": <boolean>, //执行状态，true为成功，false为失败
 	"statusCode": <number>, //状态码
-	"message": <string> //提示信息
+	"message": <string>, //提示信息
+	"pos": <Array> //显示错误的位置
 }
 ```
 | 状态码 | 描述 |
@@ -52,8 +57,153 @@ sdk.push(Object FormObject)
 | 4xx | 参数不完整或格式错误 |
 | 5xx | 服务器错误 |
 
-> 当前测试程序尚未完成格式检查功能
 
+
+### e.g.
+
+```js
+//正确格式
+;(async function(){
+	try{
+		console.log('good---->', await sdk.push({
+		    "version": 0.1,
+		    "userProfile": {
+		        "netid": "yimian.liu17",
+		        "domain": "student.xjtlu.edu.cn",
+		        "email": ["i@yimian.xyz"],
+		        "nickname": "iotcat",
+		        "gender": "male"
+		    },
+		    "userPreference": {
+		        "anonymous": false,
+		        "notify": true
+		    },
+		    "meta": {
+		        "graduateYear": 2021,
+		        "department": "Electrical & Electronic Engineering",
+		        "major": "Electronic Science Techonology",
+		        "2plus2": true,
+		        "grade": {
+		            "year2": 84,
+		            "year1": 80,
+		            "year0": 74,
+		            "gpa": 3.83,
+		            "majorGpa": 3.99,
+		            "rank": undefined,
+		            "no1Grade": undefined,
+		            "scholarship": "full"
+		        },
+		        "language": [],
+		        "tests": [],
+		        "internships": [{
+		            "title": "IETE欧朗物联",
+		            "type": ["iete", "foreign"],
+		            "length": 60,
+		            "relavence": 10,
+		            "gain": 9.6
+		        }],
+		        "projects": [{
+		            "title": "智慧农业",
+		            "type": ["surf", "university"],
+		            "length": 60,
+		            "relavence": 10,
+		            "gain": 6.8
+		        }, {
+		            "type": ["diy"],
+		            "length": 358,
+		            "relavence": 9.2,
+		            "gain": 8.6
+		        }],
+		        "papers": [],
+		        "competitions": [{
+		            "relavence": 6.7,
+		            "contribution": 4.5,
+		            "value": 3.2
+		        }],
+		        "clubs": [{
+		            "title": "infoco",
+		            "relavence": 7.6,
+		            "value": 6.4,
+		            "contribution": 1
+		        }],
+		        "agent":{},
+		        "applications": [{
+		            "country": "us",
+		            "university": "Cornell university",
+		            "department": "Electrical and Computer Engineering",
+		            "major": "Electrical and Computer Engineering",
+		            "degree": "MEng",
+		            "referenceContribution": 9,
+		            "applicationDate": "2021-01-04",
+		            "applicationEndDate": "2021-03-09",
+		            "status": "adimitted"
+		        }, {
+		            "country": "uk",
+		            "university": "university College London",
+		            "department": "Electrical and Electronic Engineering",
+		            "major": "Integrated Machine Learning Systems",
+		            "degree": "MSc",
+		            "referenceContribution": 6,
+		            "applicationDate": "2021-11-21",
+		            "applicationEndDate": "2021-02-14",
+		            "status": "adimitted"
+		        }, {
+		            "country": "us",
+		            "university": "Duke University",
+		            "department": "Electrical and Computer Engineering",
+		            "major": "Electrical and Computer Engineering",
+		            "degree": "MSc",
+		            "referenceContribution": 4,
+		            "applicationDate": "2021-01-14",
+		            "applicationEndDate": "2021-02-03",
+		            "status": "adimitted"
+		        }, {
+		            "country": "uk",
+		            "university": "University of Edinburgh",
+		            "department": "Informatics",
+		            "major": "Computer Science",
+		            "degree": "MSc",
+		            "referenceContribution": 9,
+		            "applicationDate": "2021-11-29",
+		            "applicationEndDate": "2021-05-02",
+		            "status": "adimitted"
+		        }, {
+		            "country": "uk",
+		            "university": "University of Edinburgh",
+		            "department": "Informatics",
+		            "major": "Informatics",
+		            "degree": "MSc",
+		            "referenceContribution": 9,
+		            "applicationDate": "2021-12-03",
+		            "applicationEndDate": "2021-05-18",
+		            "status": "adimitted"
+		        }],
+		        "decision": 0
+		    },
+		    "article": {
+		        "format": "markdown",
+		        "data": "肥肠肥肠长的经验分享文~~~"
+		    },
+		    "feedback": {}
+		}));
+	}catch(e){
+		console.log('err-----> ', e)
+	}
+})()
+````
+
+```js
+//错误格式
+;(async function(){
+	try{
+		console.log('good------>', await sdk.push({
+			version: 0.1
+		}));
+	}catch(e){
+		console.log('err-----> ', e)
+	}
+})()
+```
 
 ## 获取表单
 
@@ -69,7 +219,15 @@ sdk.pull(String netid)
 
 ### Returns
 
-FormObject。如找不到则返回null。
+Promise对象。
+
+### e.g. 
+
+```js
+;(async function(){
+	console.log(await sdk.pull('yimian.liu17'));
+})()
+````
 
 
 ## 重置(仅测试目的)
@@ -80,6 +238,12 @@ FormObject。如找不到则返回null。
 
 ```js
 sdk.reset()
+```
+
+### e.g.
+
+```js
+sdk.reset();
 ```
 
 
@@ -93,7 +257,15 @@ sdk.getList()
 
 ### Returns
 
-ListObject
+Promise对象。
+
+### e.g.
+
+```js
+;(async function(){
+	console.log(await sdk.getList());
+})()
+```
 
 
 
