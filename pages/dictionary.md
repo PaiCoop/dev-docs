@@ -166,7 +166,7 @@ function randomTest(){
 function randomInternship(){
 	let s = '<span class=&quot;token punctuation&quot;>{</span>';
     s += `
-            <span class=&quot;token property&quot;>&quot;title&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token string&quot;>${randomSelect(['&quot;'+randomString(Random(5, 30))+'&quot;', undefined])}</span><span class=&quot;token punctuation&quot;>,</span>`;
+            <span class=&quot;token property&quot;>&quot;title&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token string&quot;>${randomSelect(['&quot;'+randomString(Random(5, 30))+'&quot;', null])}</span><span class=&quot;token punctuation&quot;>,</span>`;
     s += `
             <span class=&quot;token property&quot;>&quot;type&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token punctuation&quot;>[</span>${concatArray(Random(1,2), ()=>randomSelect(['top500', 'iete', 'gov', 'foreign']), '<span class=&quot;token string&quot;>&quot;', '&quot;</span>', '<span class=&quot;token punctuation&quot;>, </span>')}<span class=&quot;token punctuation&quot;>]</span><span class=&quot;token punctuation&quot;>,</span>`;
     s += `
@@ -182,7 +182,7 @@ function randomInternship(){
 function randomProject(){
 	let s = '<span class=&quot;token punctuation&quot;>{</span>';
     s += `
-            <span class=&quot;token property&quot;>&quot;title&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token string&quot;>${randomSelect(['&quot;'+randomString(Random(5, 30))+'&quot;', undefined])}</span><span class=&quot;token punctuation&quot;>,</span>`;
+            <span class=&quot;token property&quot;>&quot;title&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token string&quot;>${randomSelect(['&quot;'+randomString(Random(5, 30))+'&quot;', null])}</span><span class=&quot;token punctuation&quot;>,</span>`;
     s += `
             <span class=&quot;token property&quot;>&quot;type&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token punctuation&quot;>[</span>${concatArray(Random(1,2), ()=>randomSelect(['surf', 'inclass', 'company', 'university', 'diy']), '<span class=&quot;token string&quot;>&quot;', '&quot;</span>', '<span class=&quot;token punctuation&quot;>, </span>')}<span class=&quot;token punctuation&quot;>]</span><span class=&quot;token punctuation&quot;>,</span>`;
     s += `
@@ -198,7 +198,7 @@ function randomProject(){
 function randomPaper(){
 	let s = '<span class=&quot;token punctuation&quot;>{</span>';
     s += `
-            <span class=&quot;token property&quot;>&quot;title&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token string&quot;>${randomSelect(['&quot;'+randomString(Random(5, 30))+'&quot;', undefined])}</span><span class=&quot;token punctuation&quot;>,</span>`;
+            <span class=&quot;token property&quot;>&quot;title&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token string&quot;>${randomSelect(['&quot;'+randomString(Random(5, 30))+'&quot;', null])}</span><span class=&quot;token punctuation&quot;>,</span>`;
      s += `
             <span class=&quot;token property&quot;>&quot;level&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token number&quot;>${Random(0, 10)}</span><span class=&quot;token punctuation&quot;>,</span>`;
     s += `
@@ -212,7 +212,7 @@ function randomPaper(){
 function randomCompet(){
 	let s = '<span class=&quot;token punctuation&quot;>{</span>';
     s += `
-            <span class=&quot;token property&quot;>&quot;title&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token string&quot;>${randomSelect(['&quot;'+randomString(Random(5, 30))+'&quot;', undefined])}</span><span class=&quot;token punctuation&quot;>,</span>`;
+            <span class=&quot;token property&quot;>&quot;title&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token string&quot;>${randomSelect(['&quot;'+randomString(Random(5, 30))+'&quot;', null])}</span><span class=&quot;token punctuation&quot;>,</span>`;
     s += `
             <span class=&quot;token property&quot;>&quot;contribution&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token number&quot;>${Random(0, 10)}</span><span class=&quot;token punctuation&quot;>,</span>`;
     s += `
@@ -220,7 +220,7 @@ function randomCompet(){
     s += `
             <span class=&quot;token property&quot;>&quot;relavence&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token number&quot;>${Random(0, 10)}</span><span class=&quot;token punctuation&quot;>,</span>`;
     s += `
-            <span class=&quot;token property&quot;>&quot;award&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token string&quot;>${randomSelect(['&quot;'+randomString(Random(5, 50))+'&quot;', undefined])}</span>`;    
+            <span class=&quot;token property&quot;>&quot;award&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token string&quot;>${randomSelect(['&quot;'+randomString(Random(5, 50))+'&quot;', null])}</span>`;    
     s += `
         <span class=&quot;token punctuation&quot;>}</span>`;
     return s;
@@ -228,7 +228,7 @@ function randomCompet(){
 function randomClub(){
 	let s = '<span class=&quot;token punctuation&quot;>{</span>';
     s += `
-            <span class=&quot;token property&quot;>&quot;title&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token string&quot;>${randomSelect(['&quot;'+randomString(Random(5, 30))+'&quot;', undefined])}</span><span class=&quot;token punctuation&quot;>,</span>`;
+            <span class=&quot;token property&quot;>&quot;title&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token string&quot;>${randomSelect(['&quot;'+randomString(Random(5, 30))+'&quot;', null])}</span><span class=&quot;token punctuation&quot;>,</span>`;
     s += `
             <span class=&quot;token property&quot;>&quot;contribution&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token number&quot;>${Random(0, 10)}</span><span class=&quot;token punctuation&quot;>,</span>`;
     s += `
@@ -242,9 +242,9 @@ function randomClub(){
 function randomAgent(){
 	let s = '<span class=&quot;token punctuation&quot;>{</span>';
     s += `
-            <span class=&quot;token property&quot;>&quot;title&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token string&quot;>${randomSelect(['&quot;'+randomString(Random(5, 30))+'&quot;', undefined])}</span><span class=&quot;token punctuation&quot;>,</span>`;
+            <span class=&quot;token property&quot;>&quot;title&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token string&quot;>${randomSelect(['&quot;'+randomString(Random(5, 30))+'&quot;', null])}</span><span class=&quot;token punctuation&quot;>,</span>`;
     s += `
-            <span class=&quot;token property&quot;>&quot;plan&quot;</span><span class=&quot;token operator&quot;>:</span> &quot;${randomSelect(['half', 'all', undefined])}&quot;<span class=&quot;token punctuation&quot;>,</span>`;
+            <span class=&quot;token property&quot;>&quot;plan&quot;</span><span class=&quot;token operator&quot;>:</span> &quot;${randomSelect(['half', 'all', null])}&quot;<span class=&quot;token punctuation&quot;>,</span>`;
     s += `
             <span class=&quot;token property&quot;>&quot;overall&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token number&quot;>${Random(0, 10)}</span><span class=&quot;token punctuation&quot;>,</span>`;
     s += `
@@ -278,7 +278,7 @@ function randomApp(){
     s += `
             <span class=&quot;token property&quot;>&quot;status&quot;</span><span class=&quot;token operator&quot;>:</span> &quot;${randomSelect(['adimitted', 'rejected', 'waitlist', 'onhold'])}&quot;<span class=&quot;token punctuation&quot;>,</span>`;
     s += `
-            <span class=&quot;token property&quot;>&quot;conditions&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token string&quot;>${randomSelect(['&quot;'+randomString(Random(5, 50))+'&quot;', undefined])}</span>`;   
+            <span class=&quot;token property&quot;>&quot;conditions&quot;</span><span class=&quot;token operator&quot;>:</span> <span class=&quot;token string&quot;>${randomSelect(['&quot;'+randomString(Random(5, 50))+'&quot;', null])}</span>`;   
     s += `
         <span class=&quot;token punctuation&quot;>}</span>`;
     return s;
@@ -296,11 +296,11 @@ function randomSelect(arr){
 }
 (function () {
 	function set(id, body, notStr){
-		document.getElementById(id).innerHTML = (notStr||body===undefined||body===null||body===true||body===false?'':'&quot;')+body+(notStr||body==undefined||body===null||body===true||body===false?'':'&quot;');
+		document.getElementById(id).innerHTML = (notStr||body===null||body===null||body===true||body===false?'':'&quot;')+body+(notStr||body==null||body===null||body===true||body===false?'':'&quot;');
 	};
 	set('netid', randomString(Random(4,12))+'.'+randomString(Random(2,6))+ Random(6,21));
 	set('email', concatArray(Random(0, 3), randomEmail), true);
-	set('nickname', randomSelect([randomString(Random(4, 21)), undefined]));
+	set('nickname', randomSelect([randomString(Random(4, 21)), null]));
 	set('domain', randomSelect(['student.xjtlu.edu.cn', 'xjtlu.edu.cn', 'alumni.xjtlu.edu.cn']));
 	set('gender', randomSelect(['male', 'female', 'other']));
 	set('anonymous', randomSelect([true, false]));
@@ -310,13 +310,13 @@ function randomSelect(arr){
 	set('major', randomSelect(['Electronic Science Techonology', 'Electrical Engineering']));
 	set('2plus2', randomSelect([true, false]));
 	set('year2', Random(40, 99), true);
-	set('year1', randomSelect([Random(40,88), undefined]), true);
-	set('year0', randomSelect([Random(30, 80), undefined]), true);
-	set('gpa', randomSelect([Random(200, 400)/100, undefined]), true);
-	set('majorGpa', randomSelect([Random(300, 400)/100, undefined]), true);
-	set('rank', randomSelect([Math.random().toFixed(2), undefined]), true);
-	set('no1Grade', randomSelect([Random(80, 100), undefined]), true);
-	set('scholarship', randomSelect(['full', 'half', undefined]));
+	set('year1', randomSelect([Random(40,88), null]), true);
+	set('year0', randomSelect([Random(30, 80), null]), true);
+	set('gpa', randomSelect([Random(200, 400)/100, null]), true);
+	set('majorGpa', randomSelect([Random(300, 400)/100, null]), true);
+	set('rank', randomSelect([Math.random().toFixed(2), null]), true);
+	set('no1Grade', randomSelect([Random(80, 100), null]), true);
+	set('scholarship', randomSelect(['full', 'half', null]));
 	set('languages', concatArray(Random(0, 3), randomLanguage, null, null, '<span class=&quot;token punctuation&quot;>, </span>'), true);
 	set('tests', concatArray(Random(0, 3), randomTest, null, null, '<span class=&quot;token punctuation&quot;>, </span>'), true);
 	set('internships', concatArray(Random(0, 3), randomInternship, null, null, '<span class=&quot;token punctuation&quot;>, </span>'), true);
@@ -326,7 +326,7 @@ function randomSelect(arr){
 	set('clubs', concatArray(Random(0, 3), randomClub, null, null, '<span class=&quot;token punctuation&quot;>, </span>'), true);
 	set('agent', randomAgent(), true);
 	set('apps', concatArray(Random(1, 6), randomApp, null, null, '<span class=&quot;token punctuation&quot;>, </span>'), true);
-	set('article', randomSelect([randomString(Random(0, 10000)), undefined]));
+	set('article', randomSelect([randomString(Random(0, 10000)), null]));
 })();
 ">Generate</button>
 
@@ -355,8 +355,8 @@ function randomSelect(arr){
             <span class="token property">"year0"</span><span class="token operator">:</span> <span class="token number" id="year0">74</span><span class="token punctuation">,</span>
             <span class="token property">"gpa"</span><span class="token operator">:</span> <span class="token number" id="gpa">3.83</span><span class="token punctuation">,</span>
             <span class="token property">"majorGpa"</span><span class="token operator">:</span> <span class="token number" id="majorGpa">3.99</span><span class="token punctuation">,</span>
-            <span class="token property">"rank"</span><span class="token operator">:</span> <span class="token number" id="rank">undefined</span><span class="token punctuation">,</span>
-            <span class="token property">"no1Grade"</span><span class="token operator">:</span> <span class="token number" id="no1Grade">undefined</span><span class="token punctuation">,</span>
+            <span class="token property">"rank"</span><span class="token operator">:</span> <span class="token number" id="rank">null</span><span class="token punctuation">,</span>
+            <span class="token property">"no1Grade"</span><span class="token operator">:</span> <span class="token number" id="no1Grade">null</span><span class="token punctuation">,</span>
             <span class="token property">"scholarship"</span><span class="token operator">:</span> <span class="token string" id="scholarship">"full"</span>
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
         <span class="token property">"language"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span id="languages"></span><span class="token punctuation">]</span><span class="token punctuation">,</span>
