@@ -6,20 +6,44 @@
 
 # 使用
 
+## 快速开始
+
 在html中`</body>`前加入下行代码。
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/paicoop-browser-sdk"></script>
-```
-
-之后初始化SDK。
-```html
 <script>
 sdk = new Paicoop();
 </script>
 ```
 
 然后可以正常调用。
+
+
+## 进阶
+
+`PaiCoop`构造函数可以接受以下参数。
+
+```js
+options = {
+		systemNamespace: '__PaiCoop', //本地系统数据库命名空间
+		customNamespace: '__Custom', //本地用户数据库命名空间
+		host: 'http://cn3.yimian.xyz/api/', //API接口地址
+		localMode: false, //本地测试模式
+		mask: <MaskObj> //自定义form mask
+}
+```
+
+以上均为可选参数。请使用类似如下方式使用自定义参数初始化。
+```html
+<script src="https://cdn.jsdelivr.net/npm/paicoop-browser-sdk"></script>
+<script>
+sdk = new Paicoop({
+	host: 'http://paicoop.net/api/', //使用自定义API地址
+	localMode: true //开启本地测试模式
+});
+</script>
+```
 
 
 # 业务函数
@@ -40,24 +64,36 @@ sdk.push(Object FormObject)
 
 Promise对象。
 
-#### statusObj
+#### resolve
 
-```json
+[status对象](/pages/dictionary?id=statusobj)。例如
+
+```js
 {
-	"status": <boolean>, //执行状态，true为成功，false为失败
-	"statusCode": <number>, //状态码
-	"message": <string>, //提示信息
-	"pos": <Array> //显示错误的位置
+	status: true, //成功
+	statusCode: 0, 
+	message: "Successful!",
+	data: {
+		acknowledged: true, //数据库确认收到
+		modifiedCount: 0, //发生改动的数据条目
+		upsertedCount: 0,  //新插入的数据条目
+		matchedCount: 1, //匹配的原有数据条目
+		upsertedId: null
+	}
 }
 ```
-| 状态码 | 描述 |
-| :--: | :--: |
-| 0 | 成功 |
-| 3xx | 无法连接到服务器 |
-| 4xx | 参数不完整或格式错误 |
-| 5xx | 服务器错误 |
 
+#### reject
 
+[status对象](/pages/dictionary?id=statusobj)。例如
+```js
+{
+	status: false,
+	statusCode: 402,
+	message: "Form format error! For details see data.",
+	data: [{"userPreference": ["anonymous"]}] //提示form中的userPreference的anonymous有错误
+}
+```
 
 ### e.g.
 
@@ -221,6 +257,24 @@ sdk.pull(String netid)
 
 Promise对象。
 
+#### resolve
+
+[form对象](/pages/dictionary?id=formobj)。
+#### reject
+
+[status对象](/pages/dictionary?id=statusobj)。例如
+
+```js
+{
+	status: false,
+	statusCode: 300,
+	message: "Cannot connect to host!",
+	data: undefined
+}
+```
+
+
+
 ### e.g. 
 
 ```js
@@ -257,7 +311,24 @@ sdk.getList()
 
 ### Returns
 
+
 Promise对象。
+
+#### resolve
+
+[list对象](/pages/dictionary?id=listobj)。
+#### reject
+
+[status对象](/pages/dictionary?id=statusobj)。例如
+
+```js
+{
+	status: false,
+	statusCode: 300,
+	message: "Cannot connect to host!",
+	data: undefined
+}
+```
 
 ### e.g.
 
